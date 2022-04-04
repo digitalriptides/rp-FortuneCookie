@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Index {% endblock %}
+
+
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<h5>{{ message }}</h5>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<br>
+
+<!-- ANIMATION CONTAINER -->
+<div class="animation-container animation-fade-up" data-animation-delay="900"> 
+<p><a href=random ><button type="button" class="button">Click To Get A Cookie!</button></a></p>
+</div>
+<!-- ANIMATION CONTAINER -->
+
+{% endblock %}
+
+
+                    
+
+                    

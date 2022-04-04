@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Edit Cookie{% endblock %}
+
+{% block content %}
+<div class="container center_div">
+    <h4>Add a Cookie:</h4>
+    <br>
+        <form method="post">
+            <div class="form-group">
+                <label for="cookie_id"><h5>Cookie #</h5></label>
+                <br>
+                <input type="number"  name="cookie_id" placeholder="Cookie ID number" value={{cookie_id}} style='width:auto'></input>
+            </div>
+            <div class="form-group">
+                <label for="cookie_text"><h5>Text of Cookie:</h5></label>
+                <br>
+                <textarea name="cookie_text" placeholder="Cookie text goes here" rows="3" cols="60" >{{ cookie_text }}</textarea>
+                
+            </div>
+
+            
+            <button type="submit" class="button">Submit</button>
+        </form> 
+</div>
+{% endblock %}
+

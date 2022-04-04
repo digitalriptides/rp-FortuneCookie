@@ -1,0 +1,22 @@
+[
+{
+    "id": {"N": "1"},
+    "text": {"S": "All the world may not love a lover but they will be watching him."}
+},
+{
+    "id": {"N": "2"},
+    "text": {"S": "Character is who you are when no one is watching."}
+},
+{
+    "id": {"N": "3"},
+    "text": {"S": "Pray for what you want, but work for the things you need."}
+},
+{
+    "id": {"N": "4"},
+    "text": {"S": "Share your joys and sorrows with your family."}
+},
+{
+    "id": {"N": "5"},
+    "text": {"S": "The essential conditions of everything you do must be choice, love, and passion."}
+}
+]
