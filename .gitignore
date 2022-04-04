@@ -2,6 +2,10 @@
 .env
 *.env
 
+#VSCode workspace
+.code-workspace
+*.code-workspace
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
