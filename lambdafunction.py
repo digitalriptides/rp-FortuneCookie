@@ -1,21 +1,22 @@
 import json
 import dynamodb_handler as dynamodb #importing other personal script for DynamoDB operations
+import random
 
 
-GET_RAW_PATH = "/getcookie"
+GET_RAW_PATH = "/getrandomcookie"
 CREATE_RAW_PATH = "/createcookie"
 
 def lambda_handler(event, context):
     print (event)
     
-    #Get Cookie Functionality
+    #Get RANDOM Cookie Functionality
     if event['rawPath'] == GET_RAW_PATH:
         print (f'Start Request for GET Cookie')
-        cookieid = event['queryStringParameters']['id']
-        print(f'Request received with cookie id = ' + cookieid)
-
-        
-        response = dynamodb.ReadFortunes(cookieid)
+        total_cookies_count = dynamodb.itemCount() #getting count of all cookies in db
+        print(f'Total cookies found is: {total_cookies_count} \n')
+        random_number = random.randint(1, total_cookies_count ) #Generating random int from all entries
+        print(f'Random number generated is: {random_number}')
+        response = dynamodb.ReadFortunes(random_number)
         
         if (response['ResponseMetadata']['HTTPStatusCode'] == 200):
             
