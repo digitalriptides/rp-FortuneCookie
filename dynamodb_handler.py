@@ -21,7 +21,7 @@ resource = boto3.resource(
     region_name           = REGION_NAME,
 )
 
-
+'''
 def CreateATable():
     client.create_table(
         AttributeDefinitions = [ # Name and type of the attributes 
@@ -30,7 +30,7 @@ def CreateATable():
                 'AttributeType': 'N'   # N -> Number (S -> String, B-> Binary)
             }
         ],
-        TableName = 'fortunesdb', # Name of the table 
+        TableName = 'fortune-cookies', # Name of the table 
         KeySchema = [       # Partition key/sort key attribute 
             {
                 'AttributeName': 'id',
@@ -45,20 +45,20 @@ def CreateATable():
             }
         ]
         )
-
+'''
     
 # In order to access and modify the entries of the table, 
 # we have to get the table using the resource API
-fortunestable = resource.Table('fortunesdb')
+cookiestable = resource.Table('fortune-cookies')
 
 #Counting Rows in table to find total number of cookies found
 def itemCount():
-    all_items_count = fortunestable.item_count
+    all_items_count = cookiestable.item_count
     return all_items_count
 
 #create a new fortune in the table
 def AddItemToFortunes(id, text):
-    response = fortunestable.put_item(
+    response = cookiestable.put_item(
         Item = {
             'id'     : int(id), #had to cast as integer for resource to take it
             'text'  : text
@@ -68,9 +68,9 @@ def AddItemToFortunes(id, text):
 
 #Read a fortune in the table
 def ReadFortunes(id):
-    response = fortunestable.get_item(
+    response = cookiestable.get_item(
         Key = {
-            'id'     : id
+            'id'     : int(id)
         },
     AttributesToGet=[ #this is read-handler-return-id branch, working on branch
         'text',
@@ -81,7 +81,7 @@ def ReadFortunes(id):
 
 
 def UpdateFortune(id, data:dict):
-    response = fortunestable.update_item(
+    response = cookiestable.update_item(
         Key = {
             'id': int(id)
         },
@@ -96,7 +96,7 @@ def UpdateFortune(id, data:dict):
     return response
 
 def DeleteFortune(id):
-    response = fortunestable.delete_item(
+    response = cookiestable.delete_item(
         Key = {
             'id': id
         }

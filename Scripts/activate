@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="G:\My Drive\IT Studies\APIs\APIs_and_Python"
+VIRTUAL_ENV="C:\Users\George\Documents\GitHub\Resume-Website-FortuneCookie\rp-FortuneCookie"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

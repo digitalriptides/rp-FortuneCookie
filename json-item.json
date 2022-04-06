@@ -1,0 +1,39 @@
+{
+    "version":"2.0",
+    "routeKey":"POST /createcookie",
+    "rawPath":"/createcookie",
+    "rawQueryString":"",
+    "headers":{
+       "accept":"*/*",
+       "accept-encoding":"gzip, deflate, br",
+       "content-length":"69",
+       "content-type":"application/json",
+       "host":"964avarali.execute-api.us-east-1.amazonaws.com",
+       "postman-token":"0bf63d6e-2ea1-4f0a-9b64-b9e42ca1eb49",
+       "user-agent":"PostmanRuntime/7.29.0",
+       "x-amzn-trace-id":"Root=1-624b8300-1e3ebef26ae326764e4ba98c",
+       "x-forwarded-for":"1.125.107.167",
+       "x-forwarded-port":"443",
+       "x-forwarded-proto":"https"
+    },
+    "requestContext":{
+       "accountId":"360787964769",
+       "apiId":"964avarali",
+       "domainName":"964avarali.execute-api.us-east-1.amazonaws.com",
+       "domainPrefix":"964avarali",
+       "http":{
+          "method":"POST",
+          "path":"/createcookie",
+          "protocol":"HTTP/1.1",
+          "sourceIp":"1.125.107.167",
+          "userAgent":"PostmanRuntime/7.29.0"
+       },
+       "requestId":"QFFoLiHcoAMEJjQ=",
+       "routeKey":"POST /createcookie",
+       "stage":"$default",
+       "time":"04/Apr/2022:23:45:04 +0000",
+       "timeEpoch":1649115904910
+    },
+    "body":"{\r\n    \"id\" : \"5\"\r\n    \"text\" : \"POSTING: this is the text to add\"\r\n}",
+    "isBase64Encoded":false
+ }
