@@ -1,10 +1,6 @@
-from audioop import findfactor
-from flask import Flask, request, render_template, jsonify, flash, redirect, url_for
-import dynamodb_handler as dynamodb #importing other personal script for DynamoDB operations
+from flask import Flask, request, render_template, flash, redirect, url_for
 from decouple import config
-import random
 import requests 
-import json
 
 FLASK_SECRET_KEY     = config("FLASK_SECRET_KEY")
 
@@ -66,4 +62,4 @@ def create():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
