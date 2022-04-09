@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="G:\My Drive\IT Studies\APIs\APIs_and_Python"
+$env:VIRTUAL_ENV="C:\Users\George\Documents\GitHub\Resume-Website-FortuneCookie\rp-FortuneCookie"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name
@@ -35,7 +35,7 @@ if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     function global:_OLD_VIRTUAL_PROMPT {""}
     copy-item function:prompt function:_OLD_VIRTUAL_PROMPT
     function global:prompt {
-        Write-Host -NoNewline -ForegroundColor Green '(APIs_and_Python) '
+        Write-Host -NoNewline -ForegroundColor Green '(rp-FortuneCookie) '
         _OLD_VIRTUAL_PROMPT
     }
 }

@@ -21,6 +21,7 @@ env:
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: rp-fortune-cookie           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
+  FLASK_SECRET_KEY: ${{ secrets.FLASK_SECRET_KEY }} # For secret key for Flask
 
 jobs:
   deploy:

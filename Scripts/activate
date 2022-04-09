@@ -54,8 +54,8 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    if [ "x(APIs_and_Python) " != x ] ; then
-	PS1="(APIs_and_Python) ${PS1:-}"
+    if [ "x(rp-FortuneCookie) " != x ] ; then
+	PS1="(rp-FortuneCookie) ${PS1:-}"
     else
     if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
         # special case for Aspen magic directories

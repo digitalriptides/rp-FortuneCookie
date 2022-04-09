@@ -1,8 +1,9 @@
 from flask import Flask, request, render_template, flash, redirect, url_for
 from decouple import config
 import requests 
+import os
 
-FLASK_SECRET_KEY     = config("FLASK_SECRET_KEY")
+FLASK_SECRET_KEY     = os.environ['FLASK_SECRET_KEY']
 
 app = Flask(__name__)
 

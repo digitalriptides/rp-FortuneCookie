@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=G:\My Drive\IT Studies\APIs\APIs_and_Python"
+set "VIRTUAL_ENV=C:\Users\George\Documents\GitHub\Resume-Website-FortuneCookie\rp-FortuneCookie"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"
@@ -23,7 +23,7 @@ if defined _OLD_VIRTUAL_PYTHONHOME (
 )
 
 set "_OLD_VIRTUAL_PROMPT=%PROMPT%"
-set "PROMPT=(APIs_and_Python) %PROMPT%"
+set "PROMPT=(rp-FortuneCookie) %PROMPT%"
 
 if defined PYTHONHOME (
     set "_OLD_VIRTUAL_PYTHONHOME=%PYTHONHOME%"
