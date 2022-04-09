@@ -3,7 +3,7 @@ from decouple import config
 import requests 
 import os
 
-FLASK_SECRET_KEY     = os.environ['FLASK_SECRET_KEY']
+FLASK_SECRET_KEY     = 'thisisatestsecretkey9999999999999!'
 
 app = Flask(__name__)
 
