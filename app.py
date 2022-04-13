@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template, flash, redirect, url_for
 from decouple import config
 import requests 
+from secrets_manager import get_secret
 
-FLASK_SECRET_KEY     = 'testingstringonlytesttest'
+flask_encoded_secret = get_secret()
+FLASK_SECRET_KEY     = flask_encoded_secret['FLASK_SECRET_KEY']
 
 app = Flask(__name__)
 
