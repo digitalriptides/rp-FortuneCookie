@@ -1,13 +1,13 @@
 from flask import Flask, request, render_template, flash, redirect, url_for
 from decouple import config
 import requests 
-import os
 
-FLASK_SECRET_KEY     = 'thisisatestsecretkey9999999999999!'
+FLASK_SECRET_KEY     = 'testingstringonlytesttest'
 
 app = Flask(__name__)
 
-app.secret_key = FLASK_SECRET_KEY 
+# app.secret_key =  FLASK_SECRET_KEY #calling the Key string
+app.secret_key =  FLASK_SECRET_KEY
 
 ### INDEX
 @app.route("/")
